@@ -1,18 +1,22 @@
 name: first
+
 on:
   push:
     branches:
       - main
+
 jobs:
- test:
-  runs-on: ubuntu-latest
-  steps:
-    - name: printing message
-      run: echo "hello world"
-    - name: print another message
-      run: echo "hi hello"
-    - name: print third message
-      run: echo "welcome back"
-    - name: print fourth message
-      run: echo "print hi hello"  
-  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: printing message
+        run: echo "hello world"
+
+      - name: print another message
+        run: echo "hi hello"
+
+      - name: print third message
+        run: echo "welcome back"
+
+      - name: print fourth message
+        run: echo "print hi hello"
