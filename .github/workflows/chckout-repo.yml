@@ -1,0 +1,14 @@
+name: checking out folders
+on:
+ push:
+  branches:
+   main
+jobs:
+ chekcout:
+  runs-on: ubuntu-latest
+  steps:
+    - name: checkout repo
+      uses: actions/checkout@v3
+    - name: printing folders
+      run:  ls -R
+  
