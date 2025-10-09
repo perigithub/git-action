@@ -1,0 +1,25 @@
+name: create and run python file
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+
+      - name: set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: create python file
+        run: |
+          echo 'print("Hello, I was created inside GitHub Actions!")' > temp_script.py
+
+      - name: run python file
+        run: python temp_script.py
