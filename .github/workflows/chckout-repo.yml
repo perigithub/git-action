@@ -2,7 +2,7 @@ name: checking out folders
 on:
  push:
   branches:
-   main
+   - main
 jobs:
  chekcout:
   runs-on: ubuntu-latest
